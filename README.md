@@ -9,7 +9,7 @@ workloads run with **far fewer clock cycles and minimal software changes**.
 
 ### 🔍 Overview
 
-This project enhances a RISC-V-based processor by integrating custom **memory-mapped modules** for computing the **Sigmoid** and **ReLU** activation functions, as well as a dedicated **dot product accelerator**. The design makes use of a **4-stage pipelined floating-point adder and multiplier**, specifically for accelerating dot product operations. All modules interface with GPRs(General Purpose Registers) via the processor’s **Load-Store Unit (LSU)**.
+This project enhances a RISC-V-based processor by integrating custom **memory-mapped modules** for computing the **Sigmoid** and **ReLU** activation functions, as well as a dedicated **dot product accelerator**. The design makes use of a **4-stage pipelined floating-point adder and multiplier**, specifically for accelerating dot product operations. All modules interface with memory via the processor’s **Load-Store Unit (LSU)**.
 
 ### 🔄 Operational Flow
 
@@ -21,7 +21,7 @@ This project enhances a RISC-V-based processor by integrating custom **memory-ma
    - Each element pair is fed **serially** into a **4-stage pipelined floating-point multiplier**.  
    - The output from the multiplier is then passed to a **4-stage pipelined floating-point adder** for **accumulation**.  
    - The adder loops back internally to accumulate partial sums across all elements.  
-   - Final result is written back to memory via the LSU.
+   - Final result is written back to GPRs(General Purpose Registers) via the LSU.
 
 3. **Activation Functions (Sigmoid & ReLU)**  
    - Input values are fetched in **batches (e.g., 16 values)**.  
