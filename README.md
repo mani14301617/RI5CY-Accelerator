@@ -80,9 +80,9 @@ The design integrates all accelerator modules (Dot-Product, ReLU, Sigmoid) withi
   - Load-Store Unit (LSU) Interface to BRAM  
 
 ### 🖼️ Layout Visualization
-
+<p align="center">
 <img width="833" height="805" alt="Screenshot 2025-07-15 135842" src="https://github.com/user-attachments/assets/3408a452-3847-44c1-bd8b-138aef841d7f" />
-
+</p>
 
 
 <p align="center"><em> Placed-and-Routed layout of RI5CY-Accelerator in 65 nm technology (Cadence Innovus).</em></p>
